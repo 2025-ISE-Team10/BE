@@ -29,9 +29,9 @@ const router = createRouter()
       }, HttpStatusCodes.OK);
     },
   )
-  .route("/api/auth", authRouter)
-  .route("/api/products", productsRouter)
-  .route("/api/cart", cartRouter)
-  .route("/api/orders", ordersRouter);
+  .route("/auth", authRouter)
+  .route("/products", productsRouter)
+  .route("/cart", cartRouter)
+  .route("/orders", ordersRouter);
 
 export default router;

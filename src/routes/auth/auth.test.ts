@@ -65,7 +65,7 @@ describe("auth routes", () => {
   it("로그인 실패", async () => {
     const res = await client.login.$post({
       // @ts-expect-error testClient 타입 한계로 인해 json 필드 사용
-      json: { username: "wrong", password: "wrong" },
+      json: { email: "wrong@example.com", password: "wrong" },
     });
     expect(res.status).toBe(401);
   });
