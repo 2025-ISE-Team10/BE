@@ -21,13 +21,13 @@ export const getCart = createRoute({
           product_id: z.number(),
           quantity: z.number(),
           price: z.number(),
-        })
+        }),
       ),
-      "장바구니 목록"
+      "장바구니 목록",
     ),
     [HttpStatusCodes.UNAUTHORIZED]: jsonContent(
       z.object({ message: z.string() }),
-      "로그인 필요"
+      "로그인 필요",
     ),
   },
 });
@@ -45,17 +45,17 @@ export const addCartItem = createRoute({
         product_id: z.number(),
         quantity: z.number(),
       }),
-      "장바구니 추가 정보"
+      "장바구니 추가 정보",
     ),
   },
   responses: {
     [HttpStatusCodes.OK]: jsonContent(
       z.object({ id: z.number() }),
-      "추가 성공"
+      "추가 성공",
     ),
     [HttpStatusCodes.UNAUTHORIZED]: jsonContent(
       z.object({ message: z.string() }),
-      "로그인 필요"
+      "로그인 필요",
     ),
   },
 });
@@ -71,21 +71,21 @@ export const updateCartItem = createRoute({
     params: z.object({ itemId: z.string() }),
     body: jsonContentRequired(
       z.object({ quantity: z.number() }),
-      "수량 변경"
+      "수량 변경",
     ),
   },
   responses: {
     [HttpStatusCodes.OK]: jsonContent(
       z.object({ id: z.number(), quantity: z.number() }),
-      "수정 성공"
+      "수정 성공",
     ),
     [HttpStatusCodes.UNAUTHORIZED]: jsonContent(
       z.object({ message: z.string() }),
-      "로그인 필요"
+      "로그인 필요",
     ),
     [HttpStatusCodes.NOT_FOUND]: jsonContent(
       z.object({ message: z.string() }),
-      "아이템 없음"
+      "아이템 없음",
     ),
   },
 });
@@ -103,15 +103,15 @@ export const deleteCartItem = createRoute({
   responses: {
     [HttpStatusCodes.OK]: jsonContent(
       z.object({ success: z.boolean() }),
-      "삭제 성공"
+      "삭제 성공",
     ),
     [HttpStatusCodes.UNAUTHORIZED]: jsonContent(
       z.object({ message: z.string() }),
-      "로그인 필요"
+      "로그인 필요",
     ),
     [HttpStatusCodes.NOT_FOUND]: jsonContent(
       z.object({ message: z.string() }),
-      "아이템 없음"
+      "아이템 없음",
     ),
   },
 });

@@ -1,8 +1,10 @@
 import { eq } from "drizzle-orm";
 import { z } from "zod";
-import { users } from "@/db/schema";
-import db from "@/db";
+
 import type { AppRouteHandler } from "@/lib/types";
+
+import db from "@/db";
+import { users } from "@/db/schema";
 
 export const signup: AppRouteHandler<any> = async (c) => {
   const body = await c.req.json();

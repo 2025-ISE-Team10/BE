@@ -21,9 +21,9 @@ export const getProducts = createRoute({
           likes: z.number().nullable(),
           onSale: z.boolean(),
           image: z.string().nullable(),
-        })
+        }),
       ),
-      "상품 목록"
+      "상품 목록",
     ),
   },
 });
@@ -48,11 +48,11 @@ export const getProductById = createRoute({
         onSale: z.boolean(),
         image: z.string().nullable(),
       }),
-      "상품 상세"
+      "상품 상세",
     ),
     [HttpStatusCodes.NOT_FOUND]: jsonContent(
       z.object({ message: z.string() }),
-      "상품 없음"
+      "상품 없음",
     ),
   },
 });
@@ -68,9 +68,9 @@ export const getCategories = createRoute({
           category_id: z.number(),
           name: z.string(),
           desc: z.string().nullable(),
-        })
+        }),
       ),
-      "카테고리 목록"
+      "카테고리 목록",
     ),
   },
 });

@@ -6,9 +6,9 @@ import { createMessageObjectSchema } from "stoker/openapi/schemas";
 import { createRouter } from "@/lib/create-app";
 
 import authRouter from "./auth/auth.index";
-import productsRouter from "./products/products.index";
 import cartRouter from "./cart/cart.index";
 import ordersRouter from "./orders/orders.index";
+import productsRouter from "./products/products.index";
 
 const router = createRouter()
   .openapi(
