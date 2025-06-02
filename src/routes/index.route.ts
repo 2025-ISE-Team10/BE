@@ -5,6 +5,8 @@ import { createMessageObjectSchema } from "stoker/openapi/schemas";
 
 import { createRouter } from "@/lib/create-app";
 
+import authRouter from "./auth/auth.index";
+
 const router = createRouter()
   .openapi(
     createRoute({
@@ -13,16 +15,17 @@ const router = createRouter()
       path: "/",
       responses: {
         [HttpStatusCodes.OK]: jsonContent(
-          createMessageObjectSchema("Tasks API"),
-          "Tasks API Index",
+          createMessageObjectSchema("E-Commerce API"),
+          "E-Commerce API Index",
         ),
       },
     }),
     (c) => {
       return c.json({
-        message: "Tasks API",
+        message: "E-Commerce API",
       }, HttpStatusCodes.OK);
     },
-  );
+  )
+  .route("/api/auth", authRouter);
 
 export default router;

@@ -18,7 +18,7 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().url(),
   DATABASE_AUTH_TOKEN: z.string().optional(),
 }).superRefine((input, ctx) => {
-  if (input.NODE_ENV === "production" && !input.DATABASE_AUTH_TOKEN) {
+  if (input.NODE_ENV === "production" && !input.DATABASE_AUTH_TOKEN) { // gohbc - ensure DATABASE_AUTH_TOKEN is set in production
     ctx.addIssue({
       code: z.ZodIssueCode.invalid_type,
       expected: "string",

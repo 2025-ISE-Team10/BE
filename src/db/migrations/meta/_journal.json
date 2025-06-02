@@ -8,6 +8,62 @@
       "when": 1728133964232,
       "tag": "0000_same_squadron_sinister",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1748683803869,
+      "tag": "0001_smiling_titanium_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1748691492464,
+      "tag": "0002_bored_old_lace",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1748691537544,
+      "tag": "0003_happy_glorian",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1748691658907,
+      "tag": "0004_loud_frightful_four",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1748691741945,
+      "tag": "0005_pale_mole_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1748691850933,
+      "tag": "0006_hot_anita_blake",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1748691982338,
+      "tag": "0007_cloudy_rictor",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1748692949818,
+      "tag": "0008_lame_strong_guy",
+      "breakpoints": true
     }
   ]
 }
