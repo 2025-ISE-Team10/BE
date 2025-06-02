@@ -18,7 +18,10 @@ describe("orders routes", () => {
   });
   afterAll(() => {
     setTimeout(() => {
-      try { fs.rmSync("test.db", { force: true }); } catch {}
+      try {
+        fs.rmSync("test.db", { force: true });
+      }
+      catch {}
     }, 500);
   });
 

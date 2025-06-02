@@ -6,7 +6,7 @@ import db from "@/db";
 import { cart } from "@/db/schema";
 
 function getUserIdFromHeader(c: any): number | null {
-  const userId = c.req.header("x-user-id");//헤더에서 유저 id를 x-user-id로 가져온다고 가정
+  const userId = c.req.header("x-user-id");// 헤더에서 유저 id를 x-user-id로 가져온다고 가정
   if (!userId)
     return null;
   const n = Number(userId);

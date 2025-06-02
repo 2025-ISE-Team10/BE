@@ -14,12 +14,18 @@ const client = testClient(router);
 
 describe("auth routes", () => {
   beforeAll(() => {
-    try { fs.rmSync("test.db", { force: true }); } catch {}
+    try {
+      fs.rmSync("test.db", { force: true });
+    }
+    catch {}
     execSync("pnpm drizzle-kit push");
   });
   afterAll(() => {
     setTimeout(() => {
-      try { fs.rmSync("test.db", { force: true }); } catch {}
+      try {
+        fs.rmSync("test.db", { force: true });
+      }
+      catch {}
     }, 500);
   });
 
@@ -54,6 +60,14 @@ describe("auth routes", () => {
     expect(res.status).toBe(200);
     const json = await res.json() as { email: string };
     expect(json.email).toBe(email);
+  });
+
+  it("로그인 실패", async () => {
+    const res = await client.login.$post({
+      // @ts-expect-error testClient 타입 한계로 인해 json 필드 사용
+      json: { username: "wrong", password: "wrong" },
+    });
+    expect(res.status).toBe(401);
   });
 
   it("비밀번호 확인 성공", async () => {
