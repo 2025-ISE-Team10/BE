@@ -6,6 +6,9 @@ import { createMessageObjectSchema } from "stoker/openapi/schemas";
 import { createRouter } from "@/lib/create-app";
 
 import authRouter from "./auth/auth.index";
+import productsRouter from "./products/products.index";
+import cartRouter from "./cart/cart.index";
+import ordersRouter from "./orders/orders.index";
 
 const router = createRouter()
   .openapi(
@@ -26,6 +29,9 @@ const router = createRouter()
       }, HttpStatusCodes.OK);
     },
   )
-  .route("/api/auth", authRouter);
+  .route("/api/auth", authRouter)
+  .route("/api/products", productsRouter)
+  .route("/api/cart", cartRouter)
+  .route("/api/orders", ordersRouter);
 
 export default router;
